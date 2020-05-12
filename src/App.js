@@ -4,13 +4,15 @@ import {
   Switch,
   Route,
   Link,
+  useHistory,
   // useParams,
 } from "react-router-dom"
 import QrReader from 'react-qr-reader'
 
 import './App.css'
 
-const Home = () => {
+const Categories = () => {
+  console.log('categories')
   return (
     <main className="home-page">
       <section className="category-container">
@@ -57,14 +59,17 @@ const Category = () => {
 }
 
 const Scanner = () => {
-  const [ qr, setQr ] = useState(null)
+  const history = useHistory()
+  const [ data, setData ] = useState({})
   const handleError = (error) => {
     console.log('error', error)
   }
   const handleScan = result => {
     if (!result) return
     console.log(result)
-    setQr(result)
+    const parsedData = JSON.parse(result)
+    setData(parsedData)
+    history.push(`/${ parsedData.restaurant }/categories`)
   }
   return (
     <Fragment>
@@ -75,7 +80,7 @@ const Scanner = () => {
         onScan={handleScan}
         style={{ width: '100%' }}
       />
-      <p>{ qr }</p>
+      <p>{ JSON.stringify(data) }</p>
     </Fragment>
   )
 }
@@ -88,11 +93,11 @@ function App() {
           <Route path="/category/:categoryId">
             <Category />
           </Route>
+          <Route path="/:restaurant/categories">
+            <Categories />
+          </Route>
           <Route path="/">
             <Scanner />
-          </Route>
-          <Route path="/home">
-            <Home />
           </Route>
         </Switch>
       </div>
