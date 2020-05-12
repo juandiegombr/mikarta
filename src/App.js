@@ -67,7 +67,10 @@ const Scanner = () => {
   const handleScan = url => {
     if (!url) return
     console.log(url)
-    history.push(url)
+    const restaurantId = url.split('/')[3]
+    const path = `/${ restaurantId }/categories`
+    console.log(`/${ restaurantId }/categories`)
+    history.push(path)
   }
   return (
     <Fragment>
