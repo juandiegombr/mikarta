@@ -65,7 +65,7 @@ const Scanner = () => {
   }
   return (
     <QrReader
-      facingMode="user"
+      facingMode="environment"
       delay={300}
       onError={handleError}
       onScan={handleScan}
