@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -57,20 +57,26 @@ const Category = () => {
 }
 
 const Scanner = () => {
+  const [ qr, setQr ] = useState(null)
   const handleError = (error) => {
     console.log('error', error)
   }
-  const handleScan = qr => {
-    console.log(qr)
+  const handleScan = result => {
+    if (!result) return
+    console.log(result)
+    setQr(result)
   }
   return (
-    <QrReader
-      facingMode="environment"
-      delay={300}
-      onError={handleError}
-      onScan={handleScan}
-      style={{ width: '100%' }}
-    />
+    <Fragment>
+      <QrReader
+        facingMode="environment"
+        delay={300}
+        onError={handleError}
+        onScan={handleScan}
+        style={{ width: '100%' }}
+      />
+      <p>{ qr }</p>
+    </Fragment>
   )
 }
 
