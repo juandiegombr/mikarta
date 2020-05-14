@@ -1,0 +1,50 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "react-app"],
+
+  "rules": {
+    "no-unused-vars": "error",
+    "no-var": "error",
+    "no-empty": "error",
+    "block-scoped-var": "error",
+    "eqeqeq": "error",
+    "no-alert": "error",
+    "no-eval": "error",
+    "no-empty-function": "error",
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "keyword-spacing": ["error", {
+      "after": true,
+      "before": true
+    }],
+    "object-curly-spacing": ["error", "always"],
+    "template-curly-spacing": ["error", "always"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "object-curly-newline": ["error", {
+      "ObjectExpression": { "consistent": true },
+      "ObjectPattern": { "multiline": true }
+    }],
+    "max-len": ["error", { "code": 120 }],
+    "indent": ["error", 2],
+    "complexity": ["error", 8],
+    "react/jsx-curly-spacing": ["error", "always"],
+    "react/jsx-equals-spacing": ["error", "never"],
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }]
+  },
+  "globals": {
+    "Cypress": true,
+    "cy": true,
+    "given": true,
+    "when": true,
+    "then": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.7"
+    }
+  }
+}

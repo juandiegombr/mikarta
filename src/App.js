@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,55 +9,100 @@ import {
 } from "react-router-dom"
 import QrReader from 'react-qr-reader'
 
+import { CategoryClient } from './app/category/client'
+import { ProductClient } from './app/product/client'
+
 import './App.css'
+import '@fortawesome/fontawesome-free/css/all.css'
 
 const Categories = () => {
   const { restaurantId } = useParams()
+  const [ categories, setCategories ] = useState([])
+
+  useEffect(() => {
+    (async () => {
+      const result = await CategoryClient.getAllByRestaurantId(restaurantId)
+      setCategories(result)
+    })()
+  }, [restaurantId])
+
+  const getProductsUrl = (id) => restaurantId
+    ? `/${ restaurantId }/category/${ id }`
+    : `/home/category/${ id }`
+
   console.log('Categories: ', restaurantId)
+
   return (
     <main className="home-page">
+      <header className="home-header">
+        <p className="home-header__subtitle">Restaurante</p>
+        <h1 className="home-header__title">L'andana</h1>
+      </header>
+      {/* <input
+        className="search"
+        role="search"
+        type="text"
+        placeholder="Buscar"
+      /> */}
       <section className="category-container">
-        <div className="category-wrapper">
-          <Link to="/category/1" className="category-button">Entrantes</Link>
-        </div>
-        <div className="category-wrapper">
-          <Link to="/category/2" className="category-button">Hamburguesas</Link>
-        </div>
-        <div className="category-wrapper">
-          <Link to="/category/3" className="category-button">Bocadillos</Link>
-        </div>
-        <div className="category-wrapper">
-          <Link to="/category/4" className="category-button">Refrescos</Link>
-        </div>
+        {
+          categories.map(({ id, name, icon }) => (
+            <Link
+              key={ id }
+              to={ getProductsUrl(id) }
+              className="category-button"
+            >
+              <i className={ icon }></i>
+              <div>{ name }</div>
+            </Link>
+          ))
+        }
       </section>
     </main>
   )
 }
 
-const Category = () => {
-  const { categoryId } = useParams()
-  console.log('Category: ', categoryId)
+const getFormattedPrice = price => Number(price).toFixed(2) + ' €'
+
+const Products = () => {
+  const { restaurantId, categoryId } = useParams()
+  const [ products, setProducts ] = useState([])
+
+  useEffect(() => {
+    (async () => {
+      const result = await ProductClient.getAllByCategoryId(categoryId)
+      setProducts(result)
+    })()
+  }, [categoryId])
+
+  const backUrl = restaurantId ? `/${ restaurantId }/category` : '/category'
+
   return (
     <Fragment>
-      <header className="header">
-        <Link to="/">Atrás</Link>
-      </header>
-      <main className="category-page">
+      <main className="products-page">
         <section className="product-container">
-          <div className="product-wrapper">
-            <div className="product-button">Bravas</div>
-          </div>
-          <div className="product-wrapper">
-            <div className="product-button">Morro</div>
-          </div>
-          <div className="product-wrapper">
-            <div className="product-button">Calamares</div>
-          </div>
+          {
+            products.map(({ name, ingredients, price }) => (
+              <div key={ name } className="product-button">
+                <p className="product-title">{ name }</p>
+                <p className="product-subtitle">{ ingredients }</p>
+                <p className="product-price">{ getFormattedPrice(price) }</p>
+              </div>
+            ))
+          }
         </section>
       </main>
+      <div role="complementary" className="menu">
+        <Link className="menu-link" to={ backUrl }>
+          <i className="fas fa-arrow-left"></i>
+          Categorias
+        </Link>
+      </div>
     </Fragment>
   )
 }
+
+/* eslint-disable */
 
 const Scanner = () => {
   const history = useHistory()
@@ -68,41 +113,40 @@ const Scanner = () => {
     if (!url) return
     console.log(url)
     const restaurantId = url.split('/')[3]
-    const path = `/${ restaurantId }/categories`
-    console.log(`/${ restaurantId }/categories`)
+    const path = `/${ restaurantId }/category`
+    console.log(`/${ restaurantId }/category`)
     history.push(path)
   }
   return (
-    <Fragment>
+    <main className="scanner-page">
       <QrReader
         facingMode="environment"
-        delay={300}
-        onError={handleError}
-        onScan={handleScan}
-        style={{ width: '100%' }}
+        delay={ 300 }
+        onError={ handleError }
+        onScan={ handleScan }
+        style={ { width: '100%' } }
       />
-    </Fragment>
+    </main>
   )
 }
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/category/:categoryId">
-            <Category />
-          </Route>
-          <Route path="/:restaurantId/categories">
-            <Categories />
-          </Route>
-          <Route path="/">
-            <Scanner />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/:restaurantId/category/:categoryId">
+          <Products />
+        </Route>
+        <Route path="/:restaurantId/category">
+          <Categories />
+        </Route>
+        <Route path="/">
+          <Categories />
+          {/* <Scanner /> */}
+        </Route>
+      </Switch>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
