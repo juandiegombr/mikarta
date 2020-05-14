@@ -7,6 +7,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-qr-reader": "^2.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^3.0.8",
     "eslint-loader": "^2.2.1",
@@ -14,11 +21,6 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-qr-reader": "^2.2.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
