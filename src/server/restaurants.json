@@ -1,0 +1,12 @@
+[
+  {
+    "id": "landana",
+    "name": "L'andana",
+    "type": "Restaurante"
+  },
+  {
+    "id": "bar-pepe",
+    "name": "Pepe",
+    "type": "Bar - Cafetería"
+  }
+]

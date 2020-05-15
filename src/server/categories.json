@@ -1,0 +1,100 @@
+[
+  {
+    "id": "landana-1",
+    "restaurantId": "landana",
+    "name": "Tapeo",
+    "icon": "fas fa-drumstick-bite",
+    "order": "0"
+  },
+  {
+    "id": "landana-2",
+    "restaurantId": "landana",
+    "name": "Ensaladas",
+    "icon": "fas fa-carrot",
+    "order": "1"
+  },
+  {
+    "id": "landana-3",
+    "restaurantId": "landana",
+    "name": "Platos combinados",
+    "icon": "fas fa-hamburger",
+    "order": "2"
+  },
+  {
+    "id": "landana-5",
+    "restaurantId": "landana",
+    "name": "Bocadillos",
+    "icon": "fas fa-hotdog",
+    "order": "3"
+  },
+  {
+    "id": "landana-6",
+    "restaurantId": "landana",
+    "name": "Hamburguesas",
+    "icon": "fas fa-hamburger",
+    "order": "4"
+  },
+  {
+    "id": "landana-7",
+    "restaurantId": "landana",
+    "name": "Sandwiches",
+    "icon": "fas fa-bread-slice",
+    "order": "5"
+  },
+  {
+    "id": "landana-4",
+    "restaurantId": "landana",
+    "name": "Postres",
+    "icon": "fas fa-ice-cream",
+    "order": "6"
+  },
+  {
+    "id": "landana-8",
+    "restaurantId": "landana",
+    "name": "Bebidas",
+    "icon": "fas fa-beer",
+    "order": "7"
+  },
+  {
+    "id": "landana-9",
+    "restaurantId": "landana",
+    "name": "Vinos",
+    "icon": "fas fa-wine-glass-alt",
+    "order": "8"
+  },
+  {
+    "id": "bar-pepe-1",
+    "restaurantId": "bar-pepe",
+    "name": "Tapeo",
+    "icon": "fas fa-drumstick-bite",
+    "order": "0"
+  },
+  {
+    "id": "bar-pepe-5",
+    "restaurantId": "bar-pepe",
+    "name": "Bocadillos",
+    "icon": "fas fa-hotdog",
+    "order": "3"
+  },
+  {
+    "id": "bar-pepe-6",
+    "restaurantId": "bar-pepe",
+    "name": "Hamburguesas",
+    "icon": "fas fa-hamburger",
+    "order": "4"
+  },
+  {
+    "id": "bar-pepe-4",
+    "restaurantId": "bar-pepe",
+    "name": "Postres",
+    "icon": "fas fa-ice-cream",
+    "order": "6"
+  },
+  {
+    "id": "bar-pepe-8",
+    "restaurantId": "bar-pepe",
+    "name": "Bebidas",
+    "icon": "fas fa-beer",
+    "order": "7"
+  }
+]
