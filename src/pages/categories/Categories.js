@@ -18,6 +18,7 @@ const Categories = () => {
 
   const getRestaurant = async () => {
     const restaurant = await RestaurantClient.getById(restaurantId)
+    document.title = `Mikarta - ${ restaurant.name }`
     setRestaurant(restaurant)
   }
 

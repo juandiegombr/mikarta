@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom'
 
 import { ProductClient } from 'app/product/client'
 
+import './Products.css'
+
 const getFormattedPrice = price => Number(price).toFixed(2) + ' €'
 
 const Products = () => {
@@ -23,11 +25,20 @@ const Products = () => {
       <main className="products-page">
         <section className="product-container">
           {
-            products.map(({ name, ingredients, price }) => (
+            products.map(({ name, ingredients, allergy, price }) => (
               <div key={ name } className="product-button">
                 <p className="product-title">{ name }</p>
                 <p className="product-subtitle">{ ingredients }</p>
-                <p className="product-price">{ getFormattedPrice(price) }</p>
+                <div className="product-info">
+                  <span className="product-price">{ getFormattedPrice(price) }</span>
+                  <span className="product-allergies">
+                    {
+                      allergy.map(type => (
+                        <div key={ type } className={ `allergy allergy-${ type }` }></div>
+                      ))
+                    }
+                  </span>
+                </div>
               </div>
             ))
           }

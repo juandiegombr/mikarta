@@ -1,0 +1,72 @@
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product-allergies {
+  display: flex;
+}
+
+.allergy {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  margin-left: .4rem;
+}
+
+.allergy:first-child {
+  margin-left: 0;
+}
+
+.allergy-1 {
+  background-color: #01a451;
+}
+
+.allergy-2 {
+  background-color: #2e3790;
+}
+
+.allergy-3 {
+  background-color: #bd993d;
+}
+
+.allergy-4 {
+  background-color: #68cce4;
+}
+
+.allergy-5 {
+  background-color: #6c4325;
+}
+
+.allergy-6 {
+  background-color: #f6a037;
+}
+
+.allergy-7 {
+  background-color: #a3997b;
+}
+
+.allergy-8 {
+  background-color: #df7f42;
+}
+
+.allergy-9 {
+  background-color: #be5854;
+}
+
+.allergy-10 {
+  background-color: #76154b;
+}
+
+.allergy-11 {
+  background-color: #80cc2a;
+}
+
+.allergy-12 {
+  background-color: #f7df5c;
+}
+
+.allergy-13 {
+  background-color: #b77e53;
+}
