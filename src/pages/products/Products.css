@@ -6,6 +6,13 @@
 
 .product-allergies {
   display: flex;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.product-allergies:focus {
+  outline: none;
 }
 
 .allergy {
@@ -69,4 +76,24 @@
 
 .allergy-13 {
   background-color: #b77e53;
+}
+
+.allergy-list {
+  padding: 0;
+  margin: 0;
+}
+
+.allergy-item {
+  list-style: none;
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.allergy-item:last-child {
+  margin-bottom: 0;
+}
+
+.allergy-item .allergy {
+  margin-right: 1rem;
 }
