@@ -126,6 +126,8 @@ body {
   color: #aaa;
   margin: 0;
   padding: 0;
+  background-color: transparent;
+  border: 0;
 }
 
 .info-dialog__text {
