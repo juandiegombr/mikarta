@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
-import { Categories } from './pages/categories'
-import { Products } from './pages/products'
-import { DataForm } from './pages/data-form'
+import { Categories } from 'pages/categories'
+import { Products } from 'pages/products'
+import { DataForm } from 'pages/data-form'
 
 import './App.css'
 import '@fortawesome/fontawesome-free/css/all.css'
