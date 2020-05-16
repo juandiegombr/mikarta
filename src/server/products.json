@@ -1,33 +1,9 @@
 [
   {
-    "name": "Patatas bravas",
-    "categoryId": "bar-pepe-1",
-    "price": 4.5,
-    "ingredients": "",
-    "allergy": ["3", "6", "7"],
-    "order": "0"
-  },
-  {
-    "name": "Morro de cerdo",
-    "categoryId": "bar-pepe-1",
-    "price": 4.25,
-    "ingredients": "",
-    "allergy": ["4"],
-    "order": "1"
-  },
-  {
-    "name": "Calamares romana",
-    "categoryId": "bar-pepe-1",
-    "price": 6,
-    "ingredients": "",
-    "allergy": ["1","2"],
-    "order": "2"
-  },
-  {
     "name": "Esgarraet",
     "categoryId": "landana-1",
     "price": 4.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["4"],
     "order": "0"
   },
@@ -35,7 +11,7 @@
     "name": "Ensaladilla rusa",
     "categoryId": "landana-1",
     "price": 4.25,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","3","4","6","12"],
     "order": "1"
   },
@@ -43,7 +19,7 @@
     "name": "Calamares andaluza",
     "categoryId": "landana-1",
     "price": 6,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","2"],
     "order": "2"
   },
@@ -51,7 +27,7 @@
     "name": "Choricitos a la sidra",
     "categoryId": "landana-1",
     "price": 4.25,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["7"],
     "order": "3"
   },
@@ -59,7 +35,7 @@
     "name": "Patatas bravas",
     "categoryId": "landana-1",
     "price": 4,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["3","7","6"],
     "order": "4"
   },
@@ -67,7 +43,7 @@
     "name": "Morro de cerdo",
     "categoryId": "landana-1",
     "price": 4.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["4"],
     "order": "5"
   },
@@ -75,7 +51,7 @@
     "name": "Sepia plancha",
     "categoryId": "landana-1",
     "price": 7.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["4"],
     "order": "6"
   },
@@ -91,7 +67,7 @@
     "name": "Chipirones a la andaluza",
     "categoryId": "landana-1",
     "price": 6,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","4"],
     "order": "8"
   },
@@ -99,7 +75,7 @@
     "name": "Pincho moruno",
     "categoryId": "landana-1",
     "price": 2.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "9"
   },
@@ -107,7 +83,7 @@
     "name": "Revuelto de ajetes trigueros y gambas",
     "categoryId": "landana-1",
     "price": 4.25,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["2","3"],
     "order": "10"
   },
@@ -115,7 +91,7 @@
     "name": "Tabla de embutidos a la plancha de cebolla caramelizada, boletus y barbacoa",
     "categoryId": "landana-1",
     "price": 5.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["7"],
     "order": "11"
   },
@@ -123,7 +99,7 @@
     "name": "Gambas al ajillo",
     "categoryId": "landana-1",
     "price": 7.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["2"],
     "order": "12"
   },
@@ -163,7 +139,7 @@
     "name": "Codillo asado",
     "categoryId": "landana-3",
     "price": 12.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -171,7 +147,7 @@
     "name": "Entrecot al grill",
     "categoryId": "landana-3",
     "price": 14,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "2"
   },
@@ -179,7 +155,7 @@
     "name": "Bistec de ternera con patatas y verduras",
     "categoryId": "landana-3",
     "price": 7,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "3"
   },
@@ -187,7 +163,7 @@
     "name": "Solomillo de cerdo a la pimienta",
     "categoryId": "landana-3",
     "price": 12,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","2","3","4","6","7","9"],
     "order": "4"
   },
@@ -195,7 +171,7 @@
     "name": "Lomo de cerdo con patatas y huevo frito",
     "categoryId": "landana-3",
     "price": 6,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["3"],
     "order": "5"
   },
@@ -203,7 +179,7 @@
     "name": "Pechuga de pollo con patatas y ensalada",
     "categoryId": "landana-3",
     "price": 6,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["10"],
     "order": "6"
   },
@@ -211,7 +187,7 @@
     "name": "Pinchos morunos con huevo y patatas",
     "categoryId": "landana-3",
     "price": 6.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["3"],
     "order": "7"
   },
@@ -219,7 +195,7 @@
     "name": "Sepionet a la plancha",
     "categoryId": "landana-3",
     "price": 11.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["4"],
     "order": "8"
   },
@@ -227,7 +203,7 @@
     "name": "Merluza fresca a la plancha",
     "categoryId": "landana-3",
     "price": 10.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["4"],
     "order": "9"
   },
@@ -235,7 +211,7 @@
     "name": "Emperador a la plancha",
     "categoryId": "landana-3",
     "price": 11.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["4"],
     "order": "10"
   },
@@ -243,7 +219,7 @@
     "name": "Salmon a la plancha",
     "categoryId": "landana-3",
     "price": 11.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["3"],
     "order": "11"
   },
@@ -251,7 +227,7 @@
     "name": "Panacota de café",
     "categoryId": "landana-4",
     "price": 3.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["7"],
     "order": "1"
   },
@@ -259,7 +235,7 @@
     "name": "Tarta de chocolate",
     "categoryId": "landana-4",
     "price": 3.75,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","7","8"],
     "order": "2"
   },
@@ -267,7 +243,7 @@
     "name": "Tarta de queso",
     "categoryId": "landana-4",
     "price": 3.75,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","7"],
     "order": "3"
   },
@@ -275,7 +251,7 @@
     "name": "Tarta de capuccino",
     "categoryId": "landana-4",
     "price": 4,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","3","7","8"],
     "order": "4"
   },
@@ -283,7 +259,7 @@
     "name": "Suflé de chocolate con helado",
     "categoryId": "landana-4",
     "price": 4,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","7","8"],
     "order": "5"
   },
@@ -291,7 +267,7 @@
     "name": "Torrija caramelizada con helado",
     "categoryId": "landana-4",
     "price": 4.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","3","6","7"],
     "order": "6"
   },
@@ -299,7 +275,7 @@
     "name": "Copa de helado",
     "categoryId": "landana-4",
     "price": 3.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","7"],
     "order": "7"
   },
@@ -307,55 +283,15 @@
     "name": "Cornete de helado",
     "categoryId": "landana-4",
     "price": 1.8,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": ["1","7"],
     "order": "8"
-  },
-  {
-    "name": "Cono de helado",
-    "categoryId": "bar-pepe-4",
-    "price": 1.5,
-    "ingredients": "",
-    "allergy": ["1","7"],
-    "order": "7"
-  },
-  {
-    "name": "Comtesa",
-    "categoryId": "bar-pepe-4",
-    "price": 1.8,
-    "ingredients": "",
-    "allergy": ["1","7"],
-    "order": "8"
-  },
-  {
-    "name": "Refrescos",
-    "categoryId": "bar-pepe-8",
-    "price": 1.6,
-    "ingredients": "",
-    "allergy": [],
-    "order": "1"
-  },
-  {
-    "name": "Agua 0,5L",
-    "categoryId": "bar-pepe-8",
-    "price": 1.1,
-    "ingredients": "",
-    "allergy": [],
-    "order": "1"
-  },
-  {
-    "name": "Tercio Estrella Galicia",
-    "categoryId": "bar-pepe-8",
-    "price": 1.5,
-    "ingredients": "",
-    "allergy": [],
-    "order": "1"
   },
   {
     "name": "Refrescos",
     "categoryId": "landana-8",
     "price": 1.6,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -363,7 +299,7 @@
     "name": "Agua 0,5L",
     "categoryId": "landana-8",
     "price": 1.1,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -371,7 +307,7 @@
     "name": "Tercio San Miguel",
     "categoryId": "landana-8",
     "price": 1.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -379,7 +315,7 @@
     "name": "Tercio clara San Miguel",
     "categoryId": "landana-8",
     "price": 1.8,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -387,7 +323,7 @@
     "name": "Tercio 0/0 San Miguel",
     "categoryId": "landana-8",
     "price": 1.8,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -395,7 +331,7 @@
     "name": "Tercio sin gluten San Miguel",
     "categoryId": "landana-8",
     "price": 1.6,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -403,7 +339,7 @@
     "name": "Doble Selecta",
     "categoryId": "landana-8",
     "price": 1.7,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -411,7 +347,7 @@
     "name": "Doble Warsteiner",
     "categoryId": "landana-8",
     "price": 2,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -419,7 +355,7 @@
     "name": "Jarra de Selecta 1,5L",
     "categoryId": "landana-8",
     "price": 8,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -427,7 +363,7 @@
     "name": "Jarra de Warsteiner 1,5L",
     "categoryId": "landana-8",
     "price": 9.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -435,7 +371,7 @@
     "name": "Copa de vino tinto",
     "categoryId": "landana-8",
     "price": 2,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -443,7 +379,7 @@
     "name": "Copa de vino blanco",
     "categoryId": "landana-8",
     "price": 2.5,
-    "ingredients": "",
+    "ingredients": "-",
     "allergy": [],
     "order": "1"
   },
@@ -589,30 +525,6 @@
     "price": 4.25,
     "ingredients": "Baby leaf, tomate, queso, pechuga de pollo y salsa césar",
     "allergy": ["1","3","7"],
-    "order": "1"
-  },
-  {
-    "name": "Chivito",
-    "categoryId": "bar-pepe-5",
-    "price": 5,
-    "ingredients": "Lechuga, tomate, lomo, bacon, huevo y mayonesa",
-    "allergy": ["1","3","6"],
-    "order": "1"
-  },
-  {
-    "name": "Brascada",
-    "categoryId": "bar-pepe-5",
-    "price": 6,
-    "ingredients": "Bistec de ternera, jamón y cebolla",
-    "allergy": ["1"],
-    "order": "1"
-  },
-  {
-    "name": "Almussafes",
-    "categoryId": "bar-pepe-5",
-    "price": 4.75,
-    "ingredients": "Sobrasada, bacon, queso y cebolla",
-    "allergy": ["1","6","7"],
     "order": "1"
   },
   {
@@ -823,28 +735,4 @@
     "allergy": ["1","3","6","7","12"],
     "order": "1"
   },
-  {
-    "name": "Hamburguesa de pollo",
-    "categoryId": "bar-pepe-6",
-    "price": 5.5,
-    "ingredients": "Burguer de pollo, lechuga, tomate, bacon y cebolla",
-    "allergy": ["1","6","7","12"],
-    "order": "1"
-  },
-  {
-    "name": "Hamburguesa de la casa",
-    "categoryId": "bar-pepe-6",
-    "price": 6,
-    "ingredients": "Burguer con bacon, morcilla, pimiento verde, baby leaf y tomate",
-    "allergy": ["1","6","7","12"],
-    "order": "1"
-  },
-  {
-    "name": "Hamburguesa completa",
-    "categoryId": "bar-pepe-6",
-    "price": 6.5,
-    "ingredients": "Burguer, jamón serrano, huevo, lechuga y tomate",
-    "allergy": ["1","3","6","7","12"],
-    "order": "1"
-  }
 ]

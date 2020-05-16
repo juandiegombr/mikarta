@@ -7,23 +7,24 @@ import { ProductClient } from 'app/product/client'
 import './Products.css'
 
 const ALLERGIES = [
-  { id: '1', name: 'Soja' },
-  { id: '2', name: 'Pescado' },
-  { id: '3', name: 'Mostaza' },
-  { id: '4', name: 'Moluscos' },
-  { id: '5', name: 'Lácteos' },
-  { id: '6', name: 'Huevos' },
-  { id: '7', name: 'Granos de sésamo' },
-  { id: '8', name: 'Gluten' },
-  { id: '9', name: 'Frutos de cáscara' },
-  { id: '10', name: 'Dióxido de azufre y sulfitos' },
-  { id: '11', name: 'Crustáceos' },
-  { id: '12', name: 'Cacahuetes' },
-  { id: '13', name: 'Apio' },
-  { id: '14', name: 'Altramuces' },
+  { id: 1, name: 'Gluten' },
+  { id: 2, name: 'Crustáceos' },
+  { id: 3, name: 'Huevo' },
+  { id: 4, name: 'Pescados' },
+  { id: 5, name: 'Cacahuetes' },
+  { id: 6, name: 'Soja' },
+  { id: 7, name: 'Lácteos' },
+  { id: 8, name: 'Frutos de cáscara' },
+  { id: 9, name: 'Apio' },
+  { id: 10, name: 'Mostaza' },
+  { id: 11, name: 'Granos de sésamo' },
+  { id: 12, name: 'Dióxido de azufre y sulfitos' },
+  { id: 13, name: 'Moluscos' },
+  { id: 14, name: 'Altramuces' },
 ]
 
-const getFormattedPrice = price => Number(price).toFixed(2) + ' €'
+// const getFormattedPrice = price => Number(price).toFixed(2) + ' €'
+const getFormattedPrice = price => price + ' €'
 
 const Products = () => {
   const { restaurantId, categoryId } = useParams()
@@ -33,13 +34,12 @@ const Products = () => {
 
   useEffect(() => {
     (async () => {
-      const result = await ProductClient.getAllByCategoryId(categoryId)
+      const result = await ProductClient.getAllByCategoryId(restaurantId, categoryId)
       setProducts(result)
     })()
-  }, [categoryId])
+  }, [restaurantId, categoryId])
 
   const openDialog = product => {
-    console.log(product)
     setSelectedAllergies(product)
     toggleDialogVisibility()
   }
@@ -58,7 +58,7 @@ const Products = () => {
             selectedAllergies.map(type => (
               <li key={ type } className="allergy-item">
                 <div className={ `allergy allergy-${ type }` }></div>
-                <div>{ ALLERGIES[type].name }</div>
+                <div>{ ALLERGIES.find(a => a.id === type)?.name }</div>
               </li>
             ))
           }

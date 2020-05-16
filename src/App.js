@@ -8,7 +8,7 @@ import { DataForm } from 'pages/data-form'
 import './App.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>

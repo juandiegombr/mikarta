@@ -1,0 +1,7 @@
+export const KEYS = {
+  PLACE: 'PLACE',
+  PLACE_ID: 'PLACE_ID',
+  GAPI_REF: 'GAPI_REF',
+  CATEGORIES: 'CATEGORIES',
+  PRODUCTS: 'PRODUCTS',
+}

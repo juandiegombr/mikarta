@@ -4,15 +4,11 @@ import QrReader from 'react-qr-reader'
 
 const Scanner = () => {
   const history = useHistory()
-  const handleError = (error) => {
-    console.log('error', error)
-  }
+  const handleError = (error) => { return }
   const handleScan = url => {
     if (!url) return
-    console.log(url)
     const restaurantId = url.split('/')[3]
     const path = `/${ restaurantId }/category`
-    console.log(`/${ restaurantId }/category`)
     history.push(path)
   }
   return (
