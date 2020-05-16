@@ -1,12 +1,32 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
+import { Dialog } from 'components/dialog'
 import { CategoryClient } from 'app/category/client'
 import { PlaceClient } from 'app/place/client'
 import { KEYS } from 'services/Storage'
 
+const ICONS = {
+  'Muslo de pollo': 'fas fa-drumstick-bite',
+  'Zanahoria': 'fas fa-carrot',
+  'Hamburguesa': 'fas fa-hamburger',
+  'Perrito caliente':	'fas fa-hotdog',
+  'Pan de molde':	'fas fa-bread-slice',
+  'Helado':	'fas fa-ice-cream',
+  'Cerveza': 'fas fa-beer',
+  'Copa de vino':	'fas fa-wine-glass-alt',
+  'Café': 'fas fa-coffee',
+  'Pizza': 'fas fa-pizza-slice',
+  'Pescado': 'fas fa-fish',
+  'Cóctel': 'fas fa-cocktail',
+  'Para compartir': 'fas fa-chart-pie',
+  'Galleta': 'fas fa-cookie-bite',
+  'Principales': 'fas fa-concierge-bell',
+}
+
 const Categories = () => {
   const { restaurantId } = useParams()
+  const [ isDialogVisible, setDialogVisibility ] = useState(false)
   const [ categories, setCategories ] = useState([])
   const [ restaurant, setRestaurant ] = useState({})
 
@@ -30,12 +50,23 @@ const Categories = () => {
     return `/restaurant/${ restaurantId }/category/${ formattedName }`
   }
 
+  const toggleDialogVisibility = () => {
+    setDialogVisibility(v => !v)
+  }
+
   return (
     <main className="home-page">
+      <Dialog visible={ isDialogVisible } closeDialog={ toggleDialogVisibility }>
+        <p className="info-dialog__text">Esta carta ha sido generada a través de la <b>iniciativa solidaria Mikarta</b>, un proyecto creado por un grupo de jóvenes valencianos para ayudar a bares y restaurantes ante la situación generada por la COVID-19, ofreciendo un <b>servicio gratuito</b> de cartas digitalizadas.</p>
+        <p className="info-dialog__text">Si quieres más información, escríbenos a <a href="mailto:mikarta.app@gmail.com"> mikarta.app@gmail.com</a></p>
+      </Dialog>
       <header className="home-header">
         <p className="home-header__subtitle">{ restaurant.type }</p>
         <h1 className="home-header__title">{ restaurant.name }</h1>
         <h1 className="home-header__title">{ process.env.NODE_TEST }</h1>
+        <button aria-label="Información de la iniciativa mykarta" onClick={ toggleDialogVisibility }>
+          <i className="home-header__info fas fa-info-circle" aria-hidden="true"></i>
+        </button>
       </header>
       {/* <input
         className="search"
@@ -51,7 +82,7 @@ const Categories = () => {
               to={ getProductsUrl(name) }
               className="category-button"
             >
-              <i className={ icon }></i>
+              <i className={ ICONS[icon] }></i>
               <div>{ name }</div>
             </Link>
           ))

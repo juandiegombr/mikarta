@@ -119,4 +119,24 @@ body {
   margin-bottom: .5rem;
   color: #ddd;
 }
-/* PRODUCTS */
+
+.home-header__info {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.4rem;
+  color: #aaa;
+  margin: 0;
+  padding: 0;
+}
+
+.info-dialog__text {
+  line-height: 1.4;
+}
+
+.info-dialog__text:first-child {
+  margin-top: 0px;
+}
+.info-dialog__text:last-child {
+  margin-bottom: 0px;
+}

@@ -89,7 +89,7 @@ const Products = () => {
       <div role="complementary" className="menu">
         <Link className="menu-link" to={ backUrl }>
           <i className="fas fa-arrow-left"></i>
-          Categorias
+          Categorías
         </Link>
       </div>
     </Fragment>
