@@ -63,7 +63,11 @@ const Categories = () => {
       <header className="home-header">
         <p className="home-header__subtitle">{ restaurant.type }</p>
         <h1 className="home-header__title">{ restaurant.name }</h1>
-        <button className="home-header__info" aria-label="Información de la iniciativa mykarta" onClick={ toggleDialogVisibility }>
+        <button
+          className="home-header__info"
+          aria-label="Información de la iniciativa mykarta"
+          onClick={ toggleDialogVisibility }
+        >
           <i className="fas fa-info-circle" aria-hidden="true"></i>
         </button>
       </header>

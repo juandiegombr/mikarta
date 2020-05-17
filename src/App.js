@@ -7,10 +7,12 @@ import { DataForm } from 'pages/data-form'
 
 import './App.css'
 import '@fortawesome/fontawesome-free/css/all.css'
+import { StorageHandler } from 'services/Storage'
 
 const App = () => {
   return (
     <Router>
+      <StorageHandler/>
       <Switch>
         <Route path="/data">
           <DataForm />
