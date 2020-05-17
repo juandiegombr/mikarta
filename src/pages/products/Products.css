@@ -30,10 +30,15 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, max-content);
   grid-gap: 1rem;
   padding: 1rem;
   box-sizing: border-box;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
+  bottom: 60px;
+  position: absolute;
+  top: 0;
+  overflow: scroll;
 }
 
 .product-button {
@@ -47,6 +52,10 @@
   padding: 1rem;
   background-color: white;
   box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.1);
+}
+
+.product-button:last-child {
+  margin-bottom: 1rem;
 }
 
 .product-title {

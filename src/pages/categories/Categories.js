@@ -6,6 +6,8 @@ import { CategoryClient } from 'app/category/client'
 import { PlaceClient } from 'app/place/client'
 import { KEYS } from 'services/Storage'
 
+import './Categories.css'
+
 const ICONS = {
   'Muslo de pollo': 'fas fa-drumstick-bite',
   'Zanahoria': 'fas fa-carrot',

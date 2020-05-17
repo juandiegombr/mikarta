@@ -11,7 +11,7 @@ const getReference = async placeId => {
   const localReference = sessionStorage.getItem(KEYS.GAPI_REF)
   if (localReference) return localReference
 
-  const data = await Spreadsheets.getData(process.env.REACT_APP_GAPI_REF, 'datos!A1:B2')
+  const data = await Spreadsheets.getData(process.env.REACT_APP_GAPI_REF, 'datos!A1:B200')
   const reference = referenceSerializer(data, placeId)
   sessionStorage.setItem(KEYS.GAPI_REF, reference)
   return reference
