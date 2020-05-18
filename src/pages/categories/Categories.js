@@ -32,7 +32,7 @@ const Categories = () => {
   const [ categories, setCategories ] = useState([])
   const [ restaurant, setRestaurant ] = useState({})
 
-  console.log(process.env.NODE_ENV)
+  console.log(process.env.REACT_APP_ENV)
 
   useEffect(() => {
     (async () => {
