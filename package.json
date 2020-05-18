@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "history": "^4.10.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-qr-reader": "^2.2.1",
@@ -23,9 +24,10 @@
     "eslint-plugin-react": "^7.19.0"
   },
   "scripts": {
-    "start": "PORT=3636 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --setupFiles ./config/jest/mocks.js --setupFilesAfterEnv ./config/jest/expects.js",
+    "test:watch": "react-scripts test --watch --setupFiles ./config/jest/mocks.js --setupFilesAfterEnv ./config/jest/expects.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
