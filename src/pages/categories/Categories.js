@@ -59,8 +59,17 @@ const Categories = () => {
   return (
     <main className="categories-page">
       <Dialog visible={ isDialogVisible } closeDialog={ toggleDialogVisibility }>
-        <p className="info-dialog__text">Esta carta ha sido generada a través de la <b>iniciativa solidaria Mikarta</b>, un proyecto creado por un grupo de jóvenes valencianos para ayudar a bares y restaurantes ante la situación generada por la COVID-19, ofreciendo un <b>servicio gratuito</b> de cartas digitalizadas.</p>
-        <p className="info-dialog__text">Si quieres más información, escríbenos a <a href="mailto:mikarta.app@gmail.com"> mikarta.app@gmail.com</a></p>
+        <p className="info-dialog__text">
+          Esta carta ha sido generada a través de la
+          <b> iniciativa solidaria Mikarta</b>
+          , un proyecto creado por un grupo de jóvenes valencianos para ayudar a bares y restaurantes ante la situación generada por la COVID-19, ofreciendo un
+          <b> servicio gratuito </b>
+          de cartas digitalizadas.
+        </p>
+        <p className="info-dialog__text">
+          Si quieres más información, escríbenos a
+          <a href="mailto:mikarta.app@gmail.com"> mikarta.app@gmail.com</a>
+        </p>
       </Dialog>
       <header className="categories-header">
         <p className="categories-header__subtitle">{ restaurant.type }</p>
@@ -87,7 +96,7 @@ const Categories = () => {
               to={ getProductsUrl(name) }
               className="category-button"
             >
-              <i className={ ICONS[icon] }></i>
+              { icon && <i className={ ICONS[icon] }></i> }
               <div>{ name }</div>
             </Link>
           ))
