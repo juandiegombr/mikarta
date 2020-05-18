@@ -27,7 +27,6 @@
       "ObjectExpression": { "consistent": true },
       "ObjectPattern": { "multiline": true }
     }],
-    "max-len": ["error", { "code": 120 }],
     "indent": ["error", 2],
     "complexity": ["error", 8],
     "react/jsx-curly-spacing": ["error", "always"],

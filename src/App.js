@@ -1,22 +1,22 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { Router, Switch, Route, Redirect } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 
 import { Categories } from 'pages/categories'
 import { Products } from 'pages/products'
-import { DataForm } from 'pages/data-form'
+import { Home } from 'pages/home'
 
 import './App.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import { StorageHandler } from 'services/Storage'
 
+export const history = createBrowserHistory()
+
 const App = () => {
   return (
-    <Router>
+    <Router history={ history }>
       <StorageHandler/>
       <Switch>
-        <Route path="/data">
-          <DataForm />
-        </Route>
         <Route path="/restaurant/:restaurantId/category/:categoryId">
           <Products />
         </Route>
@@ -24,7 +24,7 @@ const App = () => {
           <Categories />
         </Route>
         <Route path="/">
-          <DataForm />
+          <Home />
         </Route>
         <Redirect from="*" to="/"/>
       </Switch>
