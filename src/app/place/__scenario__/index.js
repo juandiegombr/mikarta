@@ -1,5 +1,5 @@
 export const place = {
   values: [
-    ['bar-pepe', 'restaurante'],
+    ['Pepe', 'Restaurante'],
   ],
 }

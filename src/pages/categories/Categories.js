@@ -76,7 +76,7 @@ const Categories = () => {
         <h1 className="categories-header__title">{ restaurant.name }</h1>
         <button
           className="categories-header__info"
-          aria-label="Información de la iniciativa mykarta"
+          aria-label="Información de la iniciativa mikarta"
           onClick={ toggleDialogVisibility }
         >
           <i className="fas fa-info-circle" aria-hidden="true"></i>
