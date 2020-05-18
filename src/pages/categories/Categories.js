@@ -40,7 +40,7 @@ const Categories = () => {
       }
       sessionStorage.setItem(KEYS.PLACE_ID, restaurantId)
       const restaurant = await PlaceClient.getById(restaurantId)
-      document.title = `Mikarta - ${ restaurant.name }`
+      document.title = `${ process.env.REACT_APP_ENV === 'staging' ? 'STA - ' : '' }Mikarta - ${ restaurant.name }`
       setRestaurant(restaurant)
       const categories = await CategoryClient.getAllByRestaurantId(restaurantId)
       setCategories(categories)
@@ -76,7 +76,7 @@ const Categories = () => {
         <h1 className="categories-header__title">{ restaurant.name }</h1>
         <button
           className="categories-header__info"
-          aria-label="Información de la iniciativa mykarta"
+          aria-label="Información de la iniciativa mikarta"
           onClick={ toggleDialogVisibility }
         >
           <i className="fas fa-info-circle" aria-hidden="true"></i>
