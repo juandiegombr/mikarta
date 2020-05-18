@@ -57,16 +57,16 @@ const Categories = () => {
   }
 
   return (
-    <main className="home-page">
+    <main className="categories-page">
       <Dialog visible={ isDialogVisible } closeDialog={ toggleDialogVisibility }>
         <p className="info-dialog__text">Esta carta ha sido generada a través de la <b>iniciativa solidaria Mikarta</b>, un proyecto creado por un grupo de jóvenes valencianos para ayudar a bares y restaurantes ante la situación generada por la COVID-19, ofreciendo un <b>servicio gratuito</b> de cartas digitalizadas.</p>
         <p className="info-dialog__text">Si quieres más información, escríbenos a <a href="mailto:mikarta.app@gmail.com"> mikarta.app@gmail.com</a></p>
       </Dialog>
-      <header className="home-header">
-        <p className="home-header__subtitle">{ restaurant.type }</p>
-        <h1 className="home-header__title">{ restaurant.name }</h1>
+      <header className="categories-header">
+        <p className="categories-header__subtitle">{ restaurant.type }</p>
+        <h1 className="categories-header__title">{ restaurant.name }</h1>
         <button
-          className="home-header__info"
+          className="categories-header__info"
           aria-label="Información de la iniciativa mykarta"
           onClick={ toggleDialogVisibility }
         >
