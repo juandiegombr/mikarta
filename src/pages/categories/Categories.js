@@ -32,6 +32,8 @@ const Categories = () => {
   const [ categories, setCategories ] = useState([])
   const [ restaurant, setRestaurant ] = useState({})
 
+  console.log(process.env.NODE_ENV)
+
   useEffect(() => {
     (async () => {
       const localPlaceId = sessionStorage.getItem(KEYS.PLACE_ID)
