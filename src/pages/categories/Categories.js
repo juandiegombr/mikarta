@@ -32,7 +32,7 @@ const Categories = () => {
   const [ categories, setCategories ] = useState([])
   const [ restaurant, setRestaurant ] = useState({})
 
-  console.log(process.env.NODE_ENV)
+  console.log(process.env.REACT_APP_ENV)
 
   useEffect(() => {
     (async () => {
@@ -42,7 +42,7 @@ const Categories = () => {
       }
       sessionStorage.setItem(KEYS.PLACE_ID, restaurantId)
       const restaurant = await PlaceClient.getById(restaurantId)
-      document.title = `${ process.env.NODE_ENV !== 'production' ? 'STA - ' : '' }Mikarta - ${ restaurant.name }`
+      document.title = `${ process.env.REACT_APP_ENV === 'staging' ? 'STA - ' : '' }Mikarta - ${ restaurant.name }`
       setRestaurant(restaurant)
       const categories = await CategoryClient.getAllByRestaurantId(restaurantId)
       setCategories(categories)
