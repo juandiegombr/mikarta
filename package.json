@@ -27,7 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --setupFiles ./config/jest/mocks.js --setupFilesAfterEnv ./config/jest/expects.js",
-    "test:watch": "react-scripts test --watch --setupFiles ./config/jest/mocks.js --setupFilesAfterEnv ./config/jest/expects.js",
+    "test:watch": "react-scripts test --setupFiles ./config/jest/mocks.js --setupFilesAfterEnv ./config/jest/expects.js --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
