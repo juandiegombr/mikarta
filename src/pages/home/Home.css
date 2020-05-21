@@ -8,5 +8,50 @@
 }
 
 .home-section {
-  padding: 0 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-section:first-of-type {
+  margin-top: 80px;
+}
+
+.home-section:nth-child(even) {
+  background-color: white;
+}
+
+.home-section p {
+  margin: .5rem 0;
+}
+
+.home-section h2 {
+  width: 100%;
+}
+
+.home-header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.1);
+}
+
+.home-header h1{
+  margin: 0;
+}
+
+.home-qr {
+  max-width: 300px;
+  padding: 0 1rem;
 }

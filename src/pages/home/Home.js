@@ -1,5 +1,6 @@
 import React from 'react'
 
+import qrImage from './assets/bar-pepe.png'
 import './Home.css'
 
 const Home = () => {
@@ -31,20 +32,30 @@ const Home = () => {
 
   return (
     <main className="home-page">
-      <header><h1>mikarta</h1></header>
+      <header className="home-header">
+        <h1>mikarta</h1>
+        <p></p>
+      </header>
       <section className="home-section">
         <h2>¿Qué es mikarta?</h2>
-        <p>Mikarta es una iniciativa solidaria que permite a los bares y restaurantes crear</p>
+        <p>Mikarta es una iniciativa solidaria que permite a los bares y restaurantes digitalizar su carta de una manera fácil, sencilla y gratuita.</p>
       </section>
       <section className="home-section">
         <h2>¿Cómo funciona?</h2>
-        <p>Si estás interesado/a, daremos de alta el usuario de tu local y te enviaremos tres cosas: hoja de cálculo, código QR y página web.</p>
-        <p>Con la hoja de cálculo de Google, puedes crear las categorías de tu carta (por ejemplo, entrantes, bocadillos, principales o postres), y después crear y asignar a cada una de las categorías tus productos (nombre, ingredientes, precio y alérgenos). Como no dependes de nosotros, puedes actualizar tu carta tantas veces como lo necesites.</p>
-        <p>Una vez hayas hecho esto, tus clientes podrán acceder a tu nueva carta digital mediante un código QR, que estará vinculado a una web. Te enviaremos tanto el código como la web. Ya está, así de fácil. </p>
+        <p>El sistema de Mikarta se ha ideado para ofrecer la máxima flexibilidad y facilidad.</p>
+        <p>Nosotros te facilitaremos un documento donde deberás añadir las categorías y los productos de tu carta.</p>
+        <p>Una vez hayas hecho esto, tus clientes podrán acceder a tu nueva carta digital mediante un código QR, que estará vinculado a una web. Te enviaremos tanto el código como la web. Ya está, así de fácil.</p>
+        <p>Todo esto no tiene ningún tipo de coste. Es completamente gratuito.</p>
       </section>
       <section className="home-section">
-        <h2>¿Quiénes somos?</h2>
-        <p>Mikarta es una iniciativa solidaria que permite a los bares y restaurantes crear</p>
+        <h2>¿Puedo ver un ejemplo?</h2>
+        <p>¡Claro! Te dejamos a continuación un código QR, escanéalo con la cámara de tu móvil o una aplicación para leer códigos QR, y se abrirá la carta digital de nuestro ficticio “Bar Pepe”.</p>
+        <img className="home-qr" src={ qrImage} alt="código qr"/>
+        <p>Si lo prefieres, también puedes entrar (preferiblemente desde tu teléfono móvil) haciendo click <a href="https://mikarta.netlify.app/restaurant/bar-pepe">AQUÍ</a></p>
+      </section>
+      <section className="home-section">
+        <h2>¿Cómo puedo tener mi carta digital?</h2>
+        <p>Si crees que este servicio puede ser útil para tu negocio, escríbenos al correo <a href="mailto:mikarta.app@gmail.com">mikarta.app@gmail.com</a> y te guíaremos para que puedas tener tu carta digital cuanto antes.</p>
       </section>
     </main>
   )
