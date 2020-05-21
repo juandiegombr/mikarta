@@ -1,7 +1,9 @@
 {
   "extends": ["eslint:recommended", "plugin:react/recommended", "react-app"],
-
   "rules": {
+    "no-trailing-spaces": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "quotes": ["error", "single"],
     "no-unused-vars": "error",
     "no-var": "error",
     "no-empty": "error",
@@ -33,13 +35,6 @@
     "react/jsx-equals-spacing": ["error", "never"],
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }]
-  },
-  "globals": {
-    "Cypress": true,
-    "cy": true,
-    "given": true,
-    "when": true,
-    "then": true
   },
   "settings": {
     "react": {
