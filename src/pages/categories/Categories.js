@@ -56,7 +56,7 @@ const Categories = () => {
 
   const toggleDialogVisibility = () => {
     if (!isDialogVisible) {
-      Tracker.sendInteraction('more_info_view')
+      Tracker.sendInteraction('more_info_view', { restaurantId })
     }
     setDialogVisibility(v => !v)
   }

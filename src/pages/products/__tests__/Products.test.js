@@ -8,6 +8,7 @@ const mountProductsPage = () => mount({
 
 afterEach(() => {
   sessionStorage.clear()
+  Tracker.sendInteraction.mockClear()
 })
 
 it('should send the proper events', async () => {
@@ -15,7 +16,7 @@ it('should send the proper events', async () => {
 
   await findByText('Patatas bravas')
 
-  expect(Tracker.sendInteraction).toHaveBeenCalledWith('products_view', { restaurantId: 'bar-pepe' })
+  expect(Tracker.sendInteraction).toHaveBeenCalledWith('products_view', { restaurantId: 'bar-pepe', categoryId: 'tapeo' })
 })
 
 it('should display the products information', async () => {
