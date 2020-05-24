@@ -7,6 +7,7 @@ const mountCategoriesPage = () => mount({
 
 afterEach(() => {
   sessionStorage.clear()
+  Tracker.sendInteraction.mockClear()
 })
 
 it('should send the proper events', async () => {
@@ -37,6 +38,7 @@ it('should display the project information', async () => {
   expect(dialog).toBeInTheDocument()
   expect(dialog).toHaveTextContent('mikarta.app@gmail.com')
   expect(dialog).toHaveTextContent(message)
+  expect(Tracker.sendInteraction).toHaveBeenCalledWith('more_info_view', { restaurantId: 'bar-pepe' })
 })
 
 it('should display the categories', async () => {

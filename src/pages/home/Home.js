@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import qrImage from './assets/bar-pepe.png'
+import { Tracker } from 'services/Tracker'
+
 import './Home.css'
 
 const Home = () => {
   /* eslint-disable */
+
+  useEffect(() => {
+    Tracker.sendInteraction('home_view')
+  }, [])
 
   const onLocation = ({ coords }) => {
     return
@@ -36,7 +42,7 @@ const Home = () => {
         <div className="home-header__content">
           <h1 className="home-header__title"><span>mi</span>karta</h1>
           <a href="mailto:mikarta.app@gmail.com">
-            <i class="far fa-paper-plane"></i>
+            <i className="far fa-paper-plane"></i>
           </a>
         </div>
       </header>
@@ -82,7 +88,7 @@ const Home = () => {
             <div>¿Puedo ver un ejemplo?</div>
           </h2>
           <p>¡Claro! Te dejamos a continuación un código QR, escanéalo con la cámara de tu móvil o una aplicación para leer códigos QR, y se abrirá la carta digital de nuestro ficticio “Bar Pepe”.</p>
-          <img className="home-qr" src={ qrImage} alt="código qr"/>
+          <img className="home-qr" src={ qrImage } alt="código qr"/>
           <p>Si lo prefieres, también puedes entrar (preferiblemente desde tu teléfono móvil) haciendo click <a href="https://mikarta.netlify.app/restaurant/bar-pepe">AQUÍ</a></p>
         </div>
       </section>
@@ -97,7 +103,7 @@ const Home = () => {
       <div className="home-banner">
         <a href="mailto:mikarta.app@gmail.com">
           Pide tu carta digital gratuita
-          <i class="far fa-paper-plane"></i>
+          <i className="far fa-paper-plane"></i>
         </a>
       </div>
     </main>
