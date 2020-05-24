@@ -1,5 +1,6 @@
 import { within } from '@testing-library/react'
 import { mount, helpers } from 'utils/testing-library'
+import { Tracker } from 'services/Tracker'
 
 const mountProductsPage = () => mount({
   initialRoute: '/restaurant/bar-pepe/category/tapeo',
@@ -7,6 +8,14 @@ const mountProductsPage = () => mount({
 
 afterEach(() => {
   sessionStorage.clear()
+})
+
+it('should send the proper events', async () => {
+  const { findByText } = mountProductsPage()
+
+  await findByText('Patatas bravas')
+
+  expect(Tracker.sendInteraction).toHaveBeenCalledWith('products_view', { restaurantId: 'bar-pepe' })
 })
 
 it('should display the products information', async () => {

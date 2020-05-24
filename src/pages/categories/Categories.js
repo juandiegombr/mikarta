@@ -5,6 +5,7 @@ import { Dialog } from 'components/dialog'
 import { CategoryClient } from 'app/category/client'
 import { PlaceClient } from 'app/place/client'
 import { KEYS } from 'services/Storage'
+import { Tracker } from 'services/Tracker'
 
 import './Categories.css'
 
@@ -34,6 +35,7 @@ const Categories = () => {
 
   useEffect(() => {
     (async () => {
+      Tracker.sendInteraction('categories_view', { restaurantId })
       const localPlaceId = sessionStorage.getItem(KEYS.PLACE_ID)
       if (localPlaceId !== null && restaurantId !== localPlaceId) {
         sessionStorage.clear()
