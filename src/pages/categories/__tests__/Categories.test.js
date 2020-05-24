@@ -1,4 +1,5 @@
 import { mount, helpers } from 'utils/testing-library'
+import { Tracker } from 'services/Tracker'
 
 const mountCategoriesPage = () => mount({
   initialRoute: '/restaurant/bar-pepe',
@@ -6,6 +7,14 @@ const mountCategoriesPage = () => mount({
 
 afterEach(() => {
   sessionStorage.clear()
+})
+
+it('should send the proper events', async () => {
+  const { findByText } = mountCategoriesPage()
+
+  await findByText('Pepe')
+
+  expect(Tracker.sendInteraction).toHaveBeenCalledWith('categories_view', { restaurantId: 'bar-pepe' })
 })
 
 it('should display the place information', async () => {

@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 
 import { Dialog } from 'components/dialog'
 import { ProductClient } from 'app/product/client'
+import { Tracker } from 'services/Tracker'
 
 import './Products.css'
 
@@ -34,6 +35,7 @@ const Products = () => {
 
   useEffect(() => {
     (async () => {
+      Tracker.sendInteraction('products_view', { restaurantId })
       const result = await ProductClient.getAllByCategoryId(restaurantId, categoryId)
       setProducts(result)
     })()

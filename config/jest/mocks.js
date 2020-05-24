@@ -19,3 +19,18 @@ global.fetch = jest.fn((url, b) => {
   }
   return Promise.resolve({ json: () => Promise.resolve(response) })
 })
+
+jest.mock('services/Tracker/Tracker', () => {
+  const originalModule = jest.requireActual('services/Tracker/Tracker')
+  return ({
+    Tracker: {
+      initialize: jest.spyOn(originalModule.Tracker, 'initialize'),
+      sendInteraction: jest.spyOn(originalModule.Tracker, 'sendInteraction'),
+    },
+  })
+})
+
+jest.mock('amplitude-js', () => ({
+  init: jest.fn(),
+  logEvent: jest.fn(),
+}))

@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .home-section:first-of-type {
@@ -23,7 +24,9 @@
 }
 
 .home-section p {
+  text-align: left;
   margin: .5rem 0;
+  width: 100%;
 }
 
 .home-section h2 {
