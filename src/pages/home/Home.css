@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
 .home-section {
@@ -15,12 +14,17 @@
   width: 100%;
 }
 
-.home-section:first-of-type {
-  margin-top: 80px;
+.home-section:last-of-type {
+  margin-bottom: 60px;
 }
 
 .home-section:nth-child(even) {
   background-color: white;
+}
+
+.home-section__content {
+  width: 100%;
+  max-width: 1000px;
 }
 
 .home-section p {
@@ -29,29 +33,107 @@
   width: 100%;
 }
 
-.home-section h2 {
-  width: 100%;
+.home-section__title {
+  margin: 0;
+  margin-bottom: 1.5rem;
 }
 
+.home-section__title div {
+  position: relative;
+  transform-style: preserve-3d;
+  width: fit-content;
+  text-shadow: 2px 1px white;
+}
+
+.home-section__title div::after {
+  position: absolute;
+  content: '';
+  width: calc(100% + .5rem);
+  height: 1rem;
+  /* background-color: #BCD8C1;
+  background-color: #E7E5DF; */
+  transform: translateZ(-1px);
+  left: -.5rem;
+  bottom: -4px;
+}
+
+.home-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-section li {
+  display: flex;
+}
+
+.home-section li span {
+  font-family: var(--brand-font);
+  font-size: 2em;
+  margin-right: 1rem;
+}
+
+/* HEADER */
+
 .home-header {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  width: 100vw;
+  background-color: white;
+  padding: 1rem 2rem;
+}
+
+.home-header__content {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: var(--orange);
+  border-bottom: 2px solid;
+}
+
+.home-header__title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: var(--brand-font);
+}
+
+.home-header__title span {
+  font-weight: 100;
+  font-family: var(--text-font);
+  font-size: .9em;
+  color: #888;
+}
+
+.home-header a:visited,
+.home-header a {
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+/* BANNER */
+
+.home-banner {
   position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
-  height: 80px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: bold;
-  box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.1);
+  height: 60px;
+  width: 100%;
+  background-color: var(--orange);
 }
 
-.home-header h1{
-  margin: 0;
+.home-banner a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.home-banner .far {
+  margin-left: .5rem;
 }
 
 .home-qr {
