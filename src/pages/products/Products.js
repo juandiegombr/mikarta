@@ -73,7 +73,11 @@ const Products = () => {
                 <p className="product-subtitle">{ ingredients }</p>
                 <div className="product-info">
                   <span className="product-price">{ getFormattedPrice(price) }</span>
-                  <button className="product-allergies" onClick={ () => openDialog(allergy) }>
+                  <button
+                    aria-label={ `${ name }: listado de alergias` }
+                    className="product-allergies"
+                    onClick={ () => openDialog(allergy) }
+                  >
                     {
                       allergy.map(type => (
                         <div key={ type } className={ `allergy allergy-${ type }` }></div>

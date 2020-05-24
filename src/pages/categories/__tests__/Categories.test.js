@@ -1,27 +1,15 @@
-import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { mount, helpers } from 'utils/testing-library'
 
-import App, { history } from 'App'
-
-const withPortal = () => {
-  if (document.getElementById('dialog')) { return }
-  const portalRoot = document.createElement('div')
-  portalRoot.setAttribute('id', 'dialog')
-  document.body.appendChild(portalRoot)
-}
-
-const mount = () => {
-  withPortal()
-  history.push('/restaurant/bar-pepe')
-  return render(<App/>)
-}
+const mountCategoriesPage = () => mount({
+  initialRoute: '/restaurant/bar-pepe',
+})
 
 afterEach(() => {
   sessionStorage.clear()
 })
 
 it('should display the place information', async () => {
-  const { container, findByText } = mount()
+  const { container, findByText } = mountCategoriesPage()
 
   await findByText('Pepe')
 
@@ -31,10 +19,10 @@ it('should display the place information', async () => {
 
 it('should display the project information', async () => {
   const message = 'Esta carta ha sido generada a través de la iniciativa solidaria Mikarta, un proyecto creado por un grupo de jóvenes valencianos para ayudar a bares y restaurantes ante la situación generada por la COVID-19, ofreciendo un servicio gratuito de cartas digitalizadas.Si quieres más información, escríbenos a mikarta.app@gmail.com'
-  const { findByLabelText, getByRole } = mount()
+  const { container, findByLabelText, getByRole } = mountCategoriesPage()
 
-  const infoButton = await findByLabelText('Información de la iniciativa mikarta')
-  fireEvent.click(infoButton)
+  await findByLabelText('Información de la iniciativa mikarta')
+  helpers.openMikartaDialog(container)
 
   const dialog = getByRole('dialog')
   expect(dialog).toBeInTheDocument()
@@ -43,7 +31,7 @@ it('should display the project information', async () => {
 })
 
 it('should display the categories', async () => {
-  const { container, findByText } = mount()
+  const { container, findByText } = mountCategoriesPage()
 
   await findByText('Tapeo')
 
@@ -53,10 +41,10 @@ it('should display the categories', async () => {
 })
 
 it('should go to products page and dislay the proper products', async () => {
-  const { container, findByText } = mount()
+  const { container, findByText } = mountCategoriesPage()
 
-  const categoryButton = await findByText('Tapeo')
-  fireEvent.click(categoryButton)
+  await findByText('Tapeo')
+  helpers.goToCategory(container, 'Tapeo')
   await findByText('Patatas bravas')
 
   expect(container).toHaveTextContent('Patatas bravas')
