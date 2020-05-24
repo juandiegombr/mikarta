@@ -55,6 +55,9 @@ const Categories = () => {
   }
 
   const toggleDialogVisibility = () => {
+    if (!isDialogVisible) {
+      Tracker.sendInteraction('more_info_view')
+    }
     setDialogVisibility(v => !v)
   }
 
@@ -70,7 +73,9 @@ const Categories = () => {
         </p>
         <p className="info-dialog__text">
           Si quieres más información, escríbenos a
-          <a href="mailto:mikarta.app@gmail.com"> mikarta.app@gmail.com</a>
+          <a href="mailto:mikarta.app@gmail.com"> mikarta.app@gmail.com </a>
+          o visita nuestra página web
+          <a href="mikarta.netlify.app"> mikarta.netlify.app</a>
         </p>
       </Dialog>
       <header className="categories-header">

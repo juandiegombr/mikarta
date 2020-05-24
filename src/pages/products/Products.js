@@ -35,7 +35,7 @@ const Products = () => {
 
   useEffect(() => {
     (async () => {
-      Tracker.sendInteraction('products_view', { restaurantId })
+      Tracker.sendInteraction('products_view', { restaurantId, categoryId })
       const result = await ProductClient.getAllByCategoryId(restaurantId, categoryId)
       setProducts(result)
     })()
