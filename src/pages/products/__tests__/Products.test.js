@@ -26,6 +26,7 @@ it('should display the products information', async () => {
 
   expect(container).toHaveTextContent('Patatas bravas')
   expect(container).toHaveTextContent('5.00 €')
+  expect(container).toHaveTextContent('Alérgenos')
   expect(getByLabelText('Patatas bravas: listado de alergias')).toBeInTheDocument()
 })
 

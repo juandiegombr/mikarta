@@ -75,17 +75,16 @@ const Products = () => {
                 <p className="product-subtitle">{ ingredients }</p>
                 <div className="product-info">
                   <span className="product-price">{ getFormattedPrice(price) }</span>
-                  <button
-                    aria-label={ `${ name }: listado de alergias` }
-                    className="product-allergies"
-                    onClick={ () => openDialog(allergy) }
-                  >
-                    {
-                      allergy.map(type => (
-                        <div key={ type } className={ `allergy allergy-${ type }` }></div>
-                      ))
-                    }
-                  </button>
+                  { allergy.length > 0 &&
+                    <button
+                      className="product-allergies"
+                      aria-label={ `${ name }: listado de alergias` }
+                      onClick={ () => openDialog(allergy) }
+                    >
+                      <i className="fas fa-info-circle" aria-hidden="true"></i>
+                      <span>Alérgenos</span>
+                    </button>
+                  }
                 </div>
               </div>
             ))
